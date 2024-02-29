@@ -1,10 +1,10 @@
 import express from "express";
 import dotenv from "dotenv";
 import cors from "cors";
-import mongoose from "mongoose";
 
 //MIDDLEWARE ROUTES
 import billRoutes from "./routes/billing.js"
+import mongoConnect from "./mongoDB/connection.js";
 
 
 //MIDDLEWARS
@@ -24,12 +24,7 @@ app.use('/billing', billRoutes)
 
 
 //MONGODB CONNECTION
-mongoose.connect(process.env.MONGO_URL, {
-    useNewUrlParser: true,
-    useUnifiedTopology: true,
-}).then(async () => {
-    console.log('MONGO DB connected')
-}).catch((err) => console.log(`cant connect because of this error  ${err}`));
+mongoConnect();
 
 
 // PORT CONNECTION

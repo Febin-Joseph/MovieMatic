@@ -1,0 +1,20 @@
+{
+  "name": "ticket-selling",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "directories": {
+    "test": "tests"
+  },
+  "scripts": {
+    "client": "concurrently \"npm run client-react\" \"npm run client-vue\"",
+    "client-react": "cd client && cd config/react-ts && npm start",
+    "client-vue": "cd client && cd config/vue-ts && npm run serve"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "devDependencies": {
+    "concurrently": "^8.2.2"
+  }
+}

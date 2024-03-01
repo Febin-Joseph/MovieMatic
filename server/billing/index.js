@@ -1,4 +1,4 @@
-import express from "express";
+import express, { Router } from "express";
 import dotenv from "dotenv";
 import cors from "cors";
 
@@ -20,6 +20,7 @@ app.use(cors({
 
 
 //ROUTES
+express.Router().get("/", console.log("hi"))
 app.use('/billing', billRoutes)
 
 

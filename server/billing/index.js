@@ -20,7 +20,6 @@ app.use(cors({
 
 
 //ROUTES
-express.Router().get("/", console.log("hi"))
 app.use('/billing', billRoutes)
 
 

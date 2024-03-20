@@ -3,6 +3,6 @@ import { pay } from '../controllers/billing.js';
 
 const router = express.Router();
 
-router.get('/', pay)
+router.post('/', pay)
 
 export default router;
